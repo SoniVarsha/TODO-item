@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/JavaScript"> </script>
+</head>
+<body>
+<h2>TODO List</h2>
+<form action="" id="form">
+<input type="text" id="input" placeholder="Enter your todo item">
+<input type="submit" id="sbmit" name="" >
+</form>
+<ul id="lists">
+  
+</ul>
+
+<script>
+  
+
+//from jQuery
+  //get the input
+  var jinput = $("#input")
+var jform = $('#form')
+var jul = $('#lists')
+
+  //get the text from input field input.innerText
+jinput.val();
+
+jinput.innerText = new value
+jinput.val(' ')
+
+
+function jonSubmitHandler(e){
+   e.preventDefault()
+ console.log(e.target.input.value) 
+ todoText = e.target.input.value
+ var jli = $("<li>")
+ jli.text(todoText)
+ jul.append(jli)
+ jinput.val("")
+ 
+var btn = $("<button>Delete</button>")
+jli.append(btn)
+btn.css({
+  padding: '5px',
+  color : 'red',
+  margin: '0px 15px'
+})
+btn.on('click',onclickHandler)
+}
+
+function onclickHandler(e){
+  var jli=  e.target.parentNode
+  $(jli).remove()
+}
+
+jform.on("submit",jonSubmitHandler)
+
+
+
+
+
+
